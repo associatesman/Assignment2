@@ -88,4 +88,33 @@ public class Homework {
         return maximum;
     }
 
+    //Method for finding the sum of elements with odd numbered indexes.
+    public static int findOddSum (int array[])
+    {
+        int sumOdd = 0;
+        if (arraySize > 1)
+        {
+            for (int i = 1; i < arraySize; i++ )
+            {
+                sumOdd += array[i];
+                i++;
+            }
+        }
+        return sumOdd;
+    }
+    //Method for finding the sum of elements with even numbered indexes.
+    public static int findEvenSum (int array[])
+    {
+        int sumEven = 0;
+        if (arraySize > 0)
+        {
+            for (int i = 0; i < arraySize; i++ )
+            {
+                sumEven += array[i];
+                i++;
+            }
+        }
+        return sumEven;
+    }
+
 }
