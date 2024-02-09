@@ -1,10 +1,13 @@
 import java.util.*;
 
 public class Homework {
+
+    private static int arraySize = 100;
+    
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Array Creation Here
+        int[] array = createRandomIntArray();
 
         boolean isOver = false;
 
@@ -43,6 +46,23 @@ public class Homework {
         // Closing Scanner
         scanner.close();
     }
+
+    // Method that creates an int array of a given number of int's randomly selected from the [0,100] range.
+    public static int[] createRandomIntArray()
+    {
+
+        int[] arr = new int[arraySize];
+        Random random = new Random();
+
+        for (int i = 0; i < arraySize; i++)
+        {
+            arr[i] = random.nextInt(101);
+        }
+
+        return arr;
+
+    }
+
     //Method for finding the minimum of the array
     public static int findMin (int array[])
     {
