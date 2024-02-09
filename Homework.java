@@ -43,4 +43,29 @@ public class Homework {
         // Closing Scanner
         scanner.close();
     }
+    //Method for finding the minimum of the array
+    public static int findMin (int array[])
+    {
+        int minimum = array[0];
+        //Changing the minimum if there is a smaller element than the current minimum
+        for (int i = 1 ; i < arraySize ; i++)
+        {
+            if (array[i] < minimum)
+                minimum = array[i];
+        }
+        return minimum;
+    }
+    //Method for finding the maximum of the array
+    public static int findMax (int array[])
+    {
+        int maximum = array[0];
+        //Changing the maximum if there is a larger element than the current maximum
+        for (int i = 1 ; i < arraySize ; i++)
+        {
+            if (array[i] > maximum)
+                maximum = array[i];
+        }
+        return maximum;
+    }
+
 }
