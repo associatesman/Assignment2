@@ -2,11 +2,14 @@ import java.util.*;
 
 public class Homework {
 
-    private static int arraySize = 100;
+    private static int arraySize;
     
     public static void main(String[] args) {
+
         Scanner scanner = new Scanner(System.in);
 
+        System.out.print("Enter the array length: ");
+        arraySize = scanner.nextInt();
         int[] array = createRandomIntArray();
 
         boolean isOver = false;
