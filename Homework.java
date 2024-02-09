@@ -125,22 +125,28 @@ public class Homework {
     {
         int result = 0; 
 
-        for (int element : array){
+        for (int element : array)
+        {
             result += element;
         }
 
-        double average = result / arraySize;
+        double average = (double)result / arraySize;
         double [] diff = new double[arraySize];
+        System.out.print("Difference of each element from the average: ");
 
-        for (int i = 0; i < arraySize; i++){
+        for (int i = 0; i < arraySize; i++)
+        {
             diff[i] = array[i] - average;
+            if(i > 0)
+            {
+                System.out.print(", ");
+            }
+            System.out.printf("%.1f", diff[i]);
         }
-
-        System.out.println("Difference of each element from the average: " + Arrays.toString(diff));
+        
+        System.out.println();
 
         return average;
-
-        
     }
 
     
