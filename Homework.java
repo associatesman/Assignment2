@@ -31,7 +31,7 @@ public class Homework {
             }
             else if (operation == 2) {
                 System.out.println ("The average of the array is " + findAverage(array));
-                // Diff part here
+                
             }
             else if (operation == 3) {
                 System.out.println ("The sum of the elements with odd indexes is " + findOddSum(array));
@@ -119,5 +119,30 @@ public class Homework {
         }
         return sumEven;
     }
+
+    //Method for finding the average of the array and the difference of elements from the average.
+    public static double findAverage(int array[])
+    {
+        int result = 0; 
+
+        for (int element : array){
+            result += element;
+        }
+
+        double average = result / arraySize;
+        double [] diff = new double[arraySize];
+
+        for (int i = 0; i < arraySize; i++){
+            diff[i] = array[i] - average;
+        }
+
+        System.out.println("Difference of each element from the average: " + Arrays.toString(diff));
+
+        return average;
+
+        
+    }
+
+    
 
 }
