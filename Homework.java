@@ -16,13 +16,13 @@ public class Homework {
 
         while (!isOver) {
             // Displaying the menu
-            System.out.println ("Menu Options:");
+            System.out.println ("\nMenu Options:");
             System.out.println ("1. Find the minimum and maximum of the array");
             System.out.println ("2. Find the average of the array and the differences from the average");
             System.out.println ("3. Find the sum of elements with odd and even indexes");
             System.out.println ("4. Exit");
 
-            System.out.print ("Choose Operation: ");
+            System.out.print ("\nChoose Operation: ");
             int operation = scanner.nextInt();
 
             if (operation == 1) {
